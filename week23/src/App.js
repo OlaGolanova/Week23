@@ -5,11 +5,14 @@ import cards from './dataCard.json';
 
 
 function App() {
-    return (
 
+
+    return (
+		
         <div className="app">
             {cards.map((card) => 
 			 <Card
+			 isSelected={(card.isSelected?'selected':'')}
 			 key={card.key}
 			 tariff={card.tariff}
 			 price={card.price}

@@ -9,13 +9,8 @@
     font-size: 20px;
     text-align: center;
     border: 2px solid #fafafa;
-
     &:last-child {
         margin-right: 0px;
-    }
-    &:hover {
-        transform: scale(1.1);
-        cursor:pointer;
     }
     .blueTariff {
         background: #239bab;
@@ -67,5 +62,7 @@
         color:#959595;
         background: #eeeeee;
     }
- 
+}
+.selected {
+    transform: scale(1.1);
 }
