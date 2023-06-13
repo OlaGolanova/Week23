@@ -1,0 +1,71 @@
+.card {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 13vw;
+    margin-right: 3px;
+    transition: 1s all;
+    color: #ffffff;
+    font-size: 20px;
+    text-align: center;
+    border: 2px solid #fafafa;
+
+    &:last-child {
+        margin-right: 0px;
+    }
+    &:hover {
+        transform: scale(1.1);
+        cursor:pointer;
+    }
+    .blueTariff {
+        background: #239bab;
+    }
+    .bluePrice {
+        background: #2cc1d5;
+    }
+    .greenTariff {
+        background: #208972;
+    }
+    .greenPrice {
+        background: #24ae8d;
+    }
+    .redTariff {
+        background: #c4554e;
+    }
+    .redPrice {
+        background: #f46a5f;
+    }
+    .blackTariff {
+        background: #282f37;
+    }
+    .blackPrice {
+        background: #333a44;
+    }
+    &__tariff {
+        padding: 15px;
+        border-bottom: 2px solid #fafafa;
+    }
+    &__price {
+        padding: 15px;
+        &-rub {
+            text-align: left;
+        }
+        &-fix{
+          font-size: 45px;
+        }
+        &-month {
+            text-align: right;
+        }
+    }    
+    &__speed {
+        padding: 15px;
+        color:#959595;
+        background: #f8f8f8;
+    }
+    &__descr {
+        padding: 15px;
+        color:#959595;
+        background: #eeeeee;
+    }
+ 
+}
