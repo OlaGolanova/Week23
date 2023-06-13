@@ -6,13 +6,11 @@ import cards from './dataCard.json';
 
 function App() {
 
-
     return (
-		
         <div className="app">
             {cards.map((card) => 
 			 <Card
-			 isSelected={(card.isSelected?'selected':'')}
+			 isSelected={card.isSelected}
 			 key={card.key}
 			 tariff={card.tariff}
 			 price={card.price}
