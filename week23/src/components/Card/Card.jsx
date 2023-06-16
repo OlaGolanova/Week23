@@ -4,10 +4,11 @@ import './Card.scss';
 
 
 function Card(props) {
-    let classSelected = '';
-    if(props.isSelected) classSelected = 'selected';
+    let classSelected = 'card';
+    if(props.isSelected) classSelected += ' selected';
+
     return (
-        <div className= {'card '+ classSelected}>
+        <div className= {classSelected}>
             <div className={props.classNameColorTariff} >
                 <div className= "card__tariff">{props.tariff}</div>
             </div>
@@ -32,3 +33,5 @@ function Card(props) {
 }
 
 export default Card;
+
+
