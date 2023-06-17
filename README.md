@@ -27,6 +27,59 @@
 
 7. Представьте, что вы пишете компонент логина. Если пользователь авторизован, то мы показываем его имя, а если нет, то даём возможность ввода логина и пароля. Какой код для этого нужно написать, если за авторизацию пользователя отвечает флаг isAutorized?
 
+Компонент формы авторизации
+  ```jsx
+           export default function AddToCartForm() {
+                return (
+                    <form>
+                        <input placeholder="Введитие логин"/>
+                        <input placeholder="Введитие пароль"/>
+                        <button>Вход</button>
+                    </form>
+                );
+            }
+```
+
+
+Компонент Приветсвия с Имененм
+```jsx
+
+            export default function AddToCartButton(props) {
+                return (
+                    <div>
+                        Привет, {props.name}
+                    </div>
+            
+                )
+            }
+                                 
+  ``` 
+
+
+  
+Главный компонент, принимающий разные состояния
+  ```jsx
+            import React from 'react';
+
+            import AddFormAuthorization from './AddFormAuthorization';
+            import HelloUser from './HelloUser';
+
+
+
+            export default function Logo(props) {
+                const {nameUser="Оля", isAutorized } = props;
+                
+                return (
+                    <div >
+                            {isAutorized 
+                                ? <HelloUser name={nameUser} />
+                                :  <AddFormAuthorization />
+                            }
+                    </div>
+                );
+            }
+```
+
 
 8. В чём преимущества использования препроцессоров? Какой ещё есть способ использовать переменные, кроме $ в препроцессорах?
 Можно задавать переменные, миксины, использовать математические операции, вложенность классов, амперсанд, чтобы не повторяться в написании классов.
