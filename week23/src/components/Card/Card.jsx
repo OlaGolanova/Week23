@@ -1,37 +1,46 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Card.scss';
 
 
 
-function Card(props) {
-    let classSelected = 'card';
-    if(props.isSelected) classSelected += ' selected';
+export default function Card(props) {
+    const {classNameColorTariff, tariff, classNameColorPrice, price, speed, description} = props;
+
+    const [ select, setPressed ] = useState(false);
+
+    const handleChange = () => {
+        setPressed(!select);
+    };
+    
+    let clas = 'card';
+    const classSelected = clas += ' selected';
 
     return (
-        <div className= {classSelected}>
-            <div className={props.classNameColorTariff} >
-                <div className= "card__tariff">{props.tariff}</div>
+        <div className= {select? classSelected:clas } onClick={ handleChange} >
+            <div className={classNameColorTariff} >
+                <div className= "card__tariff">{tariff}</div>
             </div>
-            <div className= {props.classNameColorPrice}>
+            <div className= {classNameColorPrice}>
                 <div className="card__price">
                     <div className="card__price-rub" >руб</div>
-                    <div className="card__price-fix"> {props.price}</div>
+                    <div className="card__price-fix"> {price}</div>
                     <div className="card__price-month">/мес</div>
                 </div>
             </div>
 
             <div className="card__speed">
-                {props.speed}
+                {speed}
             </div>
 
             <div  className="card__descr">
-                {props.descr}
+                {description}
             </div>
         </div>
      
     );
-}
+};
 
-export default Card;
+
+
 
 
