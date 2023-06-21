@@ -12,11 +12,11 @@ export default function Card(props) {
         setPressed(!select);
     };
     
-    let clas = 'card';
-    const classSelected = clas += ' selected';
+    const classCard = 'card';
+    const classSelectedCard =  'card selected';
 
     return (
-        <div className= {select? classSelected:clas } onClick={ handleChange} >
+        <div className= {select? classSelectedCard:classCard } onClick={ handleChange} >
             <div className={classNameColorTariff} >
                 <div className= "card__tariff">{tariff}</div>
             </div>
