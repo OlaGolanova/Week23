@@ -6,17 +6,17 @@ import './Card.scss';
 export default function Card(props) {
     const {classNameColorTariff, tariff, classNameColorPrice, price, speed, description} = props;
 
-    const [ select, setPressed ] = useState(false);
+    const [ isSelect, setIsSelect ] = useState(false);
 
     const handleChange = () => {
-        setPressed(!select);
+        setIsSelect(!isSelect);
     };
     
     const classCard = 'card';
     const classSelectedCard =  'card selected';
 
     return (
-        <div className= {select? classSelectedCard:classCard } onClick={ handleChange} >
+        <div className= {isSelect ? classSelectedCard:classCard } onClick={ handleChange} >
             <div className={classNameColorTariff} >
                 <div className= "card__tariff">{tariff}</div>
             </div>
