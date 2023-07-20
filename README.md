@@ -57,12 +57,12 @@ function CardList() {
                 {shoes.filter((item, index)=> {
                         if (item.price < 100) {
                         <Card
-				                key={index}
-								id={item.id}
-			                    title={item.title}
-			                    price={item.price}
-			                    description={item.description}
-			                    imgLink={item.imgLink}
+                            key={index}
+                            id={item.id}
+                            title={item.title}
+                            price={item.price}
+                            description={item.description}
+                            imgLink={item.imgLink}
 			            />
                  } })}
             </React.Fragment>
