@@ -14,6 +14,7 @@ export default function Card(props) {
     
     const classCard = 'card';
     const classSelectedCard =  'card selected';
+    
 
     return (
         <div className= {isSelect ? classSelectedCard:classCard } onClick={ handleChange} >
