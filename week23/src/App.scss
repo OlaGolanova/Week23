@@ -2,4 +2,27 @@
 	display: flex;
 	justify-content: center;
 	align-content: center;
+	
+}
+.form {
+	display: flex;
+	justify-content: center;
+
+	button {
+		width: 100px;
+		height: 50px;
+		cursor: pointer;
+	}
+	.red-border {
+		border: 2px solid red;
+	  }
+}
+
+.bootstrap {
+	margin-top: 200px;
+
+}
+.form2 {
+	margin: 0 auto;
+	width: 1000px;
 }
