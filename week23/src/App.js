@@ -1,12 +1,14 @@
 import React, { useState } from 'react';
 
-// import { Button } from 'react-bootstrap';
+
 
 import './App.scss';
 // import Card from './components/Card/Card';
 // import Counter from './components/Week25/Week25';
 // import Counter2 from './components/Week25/Counter';
 // import cards from './dataCard.json'; 
+
+import SpamFilter from './components/SpamFilter/SpamFilter';
 
 function App() {
     const [value, setValue] = useState('');
@@ -88,6 +90,8 @@ function App() {
                 <button type="submit" class="btn btn-primary">Submit</button>
             </form>
 
+
+            <SpamFilter/>
         </>
        
     );
